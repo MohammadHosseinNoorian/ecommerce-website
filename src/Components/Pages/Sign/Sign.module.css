@@ -1,0 +1,76 @@
+.forms {
+  width: 60%;
+  height: 500px;
+  margin: 50px 20%;
+  background-color: #311b92;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.forms form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
+}
+.forms form input {
+  width: 60%;
+  margin: 10px 0;
+  padding: 7px 10px;
+  border-radius: 15px;
+}
+.forms form input:focus {
+  outline: none;
+}
+.forms form label {
+  color: white;
+  border-radius: 15px;
+}
+.forms form button {
+  all: unset;
+  transition: all 150ms ease-in;
+  width: 30%;
+  height: 40px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.forms form button:hover {
+  background-color: white;
+  color: black;
+}
+.forms form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.forms form button:disabled:hover {
+  background-color: black;
+  color: white;
+}
+.forms form div {
+  top: 0px;
+  transition: all 300ms ease-in-out;
+}
+.active {
+  visibility: hidden;
+  opacity: 0;
+}
+.deactive {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.8;
+  cursor: not-allowed;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .forms {
+    width: 80%;
+    height: 600px;
+    margin: 50px auto;
+  }
+}

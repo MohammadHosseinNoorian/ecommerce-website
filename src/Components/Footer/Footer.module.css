@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.footer {
+  width: 100%;
+  min-height: 150px;
+  background-color: #311b92;
+  color: white;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.explain {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  text-align: center;
+  color: yellow;
+}
+.contact {
+  width: 90%;
+  margin: 5px 5%;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+.contact p span {
+  margin-left: 5px;
+}
+.contact p {
+  margin: 0 30px;
+}
+.contact div {
+  display: flex;
+  align-items: center;
+}
+.contact div a {
+  all: unset;
+  cursor: pointer;
+  margin: 0 5px;
+}

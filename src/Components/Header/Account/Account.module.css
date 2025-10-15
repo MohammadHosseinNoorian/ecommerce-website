@@ -1,0 +1,117 @@
+.sign {
+  display: flex;
+  align-items: center;
+}
+.sign a {
+  all: unset;
+  cursor: pointer;
+  padding-left: 10px;
+  color: white;
+  white-space: nowrap;
+}
+.headeroptions {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  direction: rtl;
+}
+.shop {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  margin-right: 2%;
+}
+.shopitem {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-top: -10px;
+  color: white;
+}
+.select_img {
+  margin: 10px auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.select_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: -1;
+}
+.select_img input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+.information {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 55px;
+  right: 2rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  border: 3px #512dab solid;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.605);
+}
+.information p {
+  color: black;
+  text-align: center;
+  margin: 5px 0;
+}
+.name {
+  color: blue;
+}
+.information a {
+  all: unset;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+.information div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+}
+.active {
+  top: 75px;
+  visibility: visible;
+  opacity: 1;
+}
+.options {
+  display: flex;
+  align-items: center;
+}
+.logout {
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  margin: 0.5rem auto;
+}
+/* @media (max-width: 768px) {
+  .headeroptions {
+    position: absolute;
+    right: 10px;
+  }
+} */

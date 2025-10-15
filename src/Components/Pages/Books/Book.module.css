@@ -1,0 +1,73 @@
+body {
+  background-image: linear-gradient(90deg, rgba(93, 93, 255, 0.46), blue);
+}
+.book {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-self: center;
+  margin: 20px 0;
+}
+.imgbook {
+  width: 40%;
+  height: 100%;
+  padding-left: 1rem;
+}
+.img {
+  width: 100%;
+  height: 80%;
+  object-fit: fill;
+}
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  color: white;
+  width: 60%;
+  height: 100%;
+  font-size: 30px;
+}
+.information div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  height: 40%;
+  margin: 2% 5%;
+}
+.information div p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.story {
+  width: 90%;
+  margin: 3% 5%;
+  font-size: 20px;
+  line-height: 40px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5%;
+  font-size: 50px;
+}
+.add_delete {
+  display: flex;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+.add_delete * {
+  margin: 0 0.5rem;
+}
+@media (max-width: 768px) {
+  .book {
+    height: 950px;
+  }
+}

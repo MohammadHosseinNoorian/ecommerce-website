@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.blog {
+  width: 60%;
+  margin: 50px 20%;
+  background-color: #b39ddb;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+.blog p {
+  margin: 10px 0;
+  line-height: 30px;
+  font-size: 20px;
+}
+.blog h1 {
+  margin: 20px 0;
+  color: #311b92;
+}
