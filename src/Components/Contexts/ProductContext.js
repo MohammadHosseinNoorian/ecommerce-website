@@ -81,10 +81,13 @@ export function FavoriteProvider({ children }) {
       } else {
         newFavorites = user.favorites.filter((elem) => elem.id !== Book.id);
       }
-      await axios.put(`http://localhost:3001/users/${user.id}`, {
-        ...user,
-        favorites: newFavorites,
-      });
+      await axios.put(
+        `http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/users/${user.id}`,
+        {
+          ...user,
+          favorites: newFavorites,
+        }
+      );
       setuser({ ...user, favorites: newFavorites });
     }
   };
@@ -144,10 +147,13 @@ export function ShopProvider({ children }) {
         default:
           throw new Error(`Unknown action type: ${action}`);
       }
-      await axios.put(`http://localhost:3001/users/${user.id}`, {
-        ...user,
-        products: newproducts,
-      });
+      await axios.put(
+        `http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/users/${user.id}`,
+        {
+          ...user,
+          products: newproducts,
+        }
+      );
       setuser({
         ...user,
         products: newproducts,

@@ -68,11 +68,14 @@ const Sign = () => {
         favorites: [],
       };
       try {
-        let data = await fetch("http://localhost:3001/users", {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify(user),
-        });
+        let data = await fetch(
+          "http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/users",
+          {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(user),
+          }
+        );
         await data.json();
         alert("your sign in is complete");
         tolog();
@@ -86,7 +89,9 @@ const Sign = () => {
     async (e) => {
       e.preventDefault();
       try {
-        let data = await fetch("http://localhost:3001/users");
+        let data = await fetch(
+          "http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/users"
+        );
         let res = await data.json();
         let userFound = res.find(
           (elem) =>

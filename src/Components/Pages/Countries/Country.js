@@ -1,6 +1,5 @@
 import Books from "./Books";
 import style from "./Country.module.css";
-import { FavoriteProvider, ShopProvider } from "../../Contexts/ProductContext";
 import { memo } from "react";
 const Country = ({ country }) => {
   return (

@@ -2,7 +2,6 @@ import { memo, useCallback, useEffect, useState } from "react";
 import style from "./Home.module.css";
 import Product from "./Product";
 import { GrPrevious, GrNext } from "react-icons/gr";
-import { FavoriteProvider, ShopProvider } from "../../Contexts/ProductContext";
 const Products = () => {
   let [books, setbooks] = useState([]);
   let [pagepattern, setpagepattern] = useState([]);
@@ -13,7 +12,9 @@ const Products = () => {
   let [user] = useState(null);
   let getproducts = useCallback(async () => {
     try {
-      let res = await fetch("http://localhost:3001/products");
+      let res = await fetch(
+        "http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/products"
+      );
       let data = await res.json();
       settotalpages(
         data.length % 6 === 0

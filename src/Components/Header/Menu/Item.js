@@ -7,16 +7,6 @@ const Item = ({ item, element, link }) => {
   let li = useRef();
   const { isMobile, isTablet } = useList();
   const [subMenuOn, setsubMenuOn] = useState(false);
-  // let showsubmenu = () => {
-  //   if (li.current.children.length > 1) {
-  //     li.current.children[1].classList.add(style.active);
-  //   }
-  // };
-  // let dontshowsubmenu = () => {
-  //   if (li.current.children.length > 1) {
-  //     li.current.children[1].classList.remove(style.active);
-  //   }
-  // };
   const togglesubmenu = () => {
     if (li.current.children.length < 2) return;
     if (subMenuOn) li.current.children[1].classList.remove(style.active);
