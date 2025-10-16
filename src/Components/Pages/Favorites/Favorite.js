@@ -3,12 +3,13 @@ import { FaHeart } from "react-icons/fa";
 import { useFavorite } from "../../Contexts/ProductContext";
 import { memo, useContext } from "react";
 import { usercontext } from "../../App/App";
+import { Link } from "react-router-dom";
 
 const Favorite = ({ book }) => {
   const { togglefavorite } = useFavorite();
   const { user } = useContext(usercontext);
   return (
-    <>
+    <Link to={book.link} className={style.favorites}>
       <img src={book.img} alt={book.name} />
       <div className={style.info}>
         <h3>{book.name}</h3>
@@ -44,7 +45,7 @@ const Favorite = ({ book }) => {
           }}
         />
       </div>
-    </>
+    </Link>
   );
 };
 

@@ -18,9 +18,14 @@ const Myproducts = () => {
         <div className={style.myproducts}>
           {user.products.map((elem, index) => {
             return (
-              <section className={style.myproduct} dir="rtl" key={index}>
+              <Link
+                to={elem.link}
+                className={style.myproduct}
+                dir="rtl"
+                key={index}
+              >
                 <Myproduct book={elem} />
-              </section>
+              </Link>
             );
           })}
         </div>

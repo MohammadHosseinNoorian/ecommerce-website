@@ -63,7 +63,7 @@ const Sign = () => {
         email: signemail,
         password: signpassword,
         username: signusername,
-        img: "",
+        img: "https://static.vecteezy.com/system/resources/previews/020/213/738/non_2x/add-profile-picture-icon-upload-photo-of-social-media-user-vector.jpg",
         products: [],
         favorites: [],
       };
@@ -135,6 +135,7 @@ const Sign = () => {
           placeholder="username .........."
           type="text"
           name="UserName"
+          autoComplete="username"
           required
         />
         <label htmlFor="password">password</label>
@@ -146,6 +147,7 @@ const Sign = () => {
           placeholder="password .........."
           type="password"
           name="password"
+          autoComplete="current-password"
           required
         />
         {massage ? (
@@ -213,6 +215,7 @@ const Sign = () => {
           placeholder="username .........."
           type="text"
           name="UserName"
+          autoComplete="username"
           required
         />
         <label htmlFor="password1">password</label>
@@ -225,6 +228,7 @@ const Sign = () => {
           placeholder="password .........."
           type="password"
           name="password"
+          autoComplete="current-password"
           required
         />
         <p style={{ color: "white" }}>if you already have an Account?</p>
