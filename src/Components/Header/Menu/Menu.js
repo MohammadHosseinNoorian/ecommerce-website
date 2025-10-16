@@ -11,9 +11,7 @@ const Menu = () => {
   const list = useRef(null);
   let getmenu = async () => {
     try {
-      let data = await fetch(
-        "http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/menu"
-      );
+      let data = await fetch("https://myapp-api.onrender.com/menu");
       let res = await data.json();
       setmenu(res);
     } catch (error) {

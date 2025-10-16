@@ -13,9 +13,7 @@ const Slider = () => {
 
   let getslides = useCallback(async () => {
     try {
-      let data = await fetch(
-        "http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/slides"
-      );
+      let data = await fetch("https://myapp-api.onrender.com/slides");
       let res = await data.json();
       setslides(res);
       setwidth(res.length * 100);

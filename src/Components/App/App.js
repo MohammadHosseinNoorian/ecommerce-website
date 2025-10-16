@@ -26,9 +26,7 @@ const App = () => {
   let [countries, setcountries] = useState([]);
   let getproducts = useCallback(async () => {
     try {
-      let res = await fetch(
-        "http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/products"
-      );
+      let res = await fetch("https://myapp-api.onrender.com/products");
       let data = await res.json();
       setbooks(data);
     } catch (er) {
@@ -37,9 +35,7 @@ const App = () => {
   }, []);
   let getcountries = useCallback(async () => {
     try {
-      let res = await fetch(
-        "http://my-json-server.typicode.com/MohammadHosseinNoorian/ecommerce-website/countries"
-      );
+      let res = await fetch("https://myapp-api.onrender.com/countries");
       let data = await res.json();
       setcountries(data);
     } catch (er) {
