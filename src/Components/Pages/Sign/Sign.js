@@ -68,7 +68,7 @@ const Sign = () => {
         favorites: [],
       };
       try {
-        let data = await fetch("https://myapp-api.onrender.com/users", {
+        let data = await fetch("http://localhost:3001/users", {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(user),
@@ -86,7 +86,7 @@ const Sign = () => {
     async (e) => {
       e.preventDefault();
       try {
-        let data = await fetch("https://myapp-api.onrender.com/users");
+        let data = await fetch("http://localhost:3001/users");
         let res = await data.json();
         let userFound = res.find(
           (elem) =>

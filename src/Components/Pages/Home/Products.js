@@ -12,7 +12,7 @@ const Products = () => {
   let [user] = useState(null);
   let getproducts = useCallback(async () => {
     try {
-      let res = await fetch("https://myapp-api.onrender.com/products");
+      let res = await fetch("http://localhost:3001/products");
       let data = await res.json();
       settotalpages(
         data.length % 6 === 0
