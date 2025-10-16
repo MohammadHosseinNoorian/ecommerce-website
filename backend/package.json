@@ -1,9 +1,9 @@
 {
-  "name": "my-app-backend",
+  "name": "backend",
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "json-server": "^0.17.4",
