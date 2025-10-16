@@ -13,7 +13,7 @@ const Slider = () => {
 
   let getslides = useCallback(async () => {
     try {
-      let data = await fetch("http://localhost:3001/slides");
+      let data = await fetch("/api/slides");
       let res = await data.json();
       setslides(res);
       setwidth(res.length * 100);

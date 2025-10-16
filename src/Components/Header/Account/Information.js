@@ -14,7 +14,7 @@ const Information = () => {
     setuserImg(URL.createObjectURL(img));
   };
   const putImg = async () => {
-    await axios.put(`http://localhost:3001/users/${user.id}`, {
+    await axios.put(`/api/users/${user.id}`, {
       ...user,
       img: userImg,
     });

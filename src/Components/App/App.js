@@ -26,7 +26,7 @@ const App = () => {
   let [countries, setcountries] = useState([]);
   let getproducts = useCallback(async () => {
     try {
-      let res = await fetch("http://localhost:3001/products");
+      let res = await fetch("/api/products");
       let data = await res.json();
       setbooks(data);
     } catch (er) {
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
   let getcountries = useCallback(async () => {
     try {
-      let res = await fetch("http://localhost:3001/countries");
+      let res = await fetch("/api/countries");
       let data = await res.json();
       setcountries(data);
     } catch (er) {
