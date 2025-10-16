@@ -1,10 +1,4 @@
-import React, {
-  memo,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { memo, useContext, useEffect, useState } from "react";
 import { usercontext } from "../../App/App";
 import style from "./Account.module.css";
 import Infof from "./Infof";
