@@ -12,7 +12,7 @@ const Products = () => {
   let [user] = useState(null);
   let getproducts = useCallback(async () => {
     try {
-      let res = await fetch("/api/products");
+      let res = await fetch(`${process.env.REACT_APP_API_URL}/products`);
       let data = await res.json();
       settotalpages(
         data.length % 6 === 0

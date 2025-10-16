@@ -81,7 +81,7 @@ export function FavoriteProvider({ children }) {
       } else {
         newFavorites = user.favorites.filter((elem) => elem.id !== Book.id);
       }
-      await axios.put(`/api/users/${user.id}`, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/users/${user.id}`, {
         ...user,
         favorites: newFavorites,
       });
@@ -144,7 +144,7 @@ export function ShopProvider({ children }) {
         default:
           throw new Error(`Unknown action type: ${action}`);
       }
-      await axios.put(`/api/users/${user.id}`, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/users/${user.id}`, {
         ...user,
         products: newproducts,
       });

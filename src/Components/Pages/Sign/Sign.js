@@ -68,7 +68,7 @@ const Sign = () => {
         favorites: [],
       };
       try {
-        let data = await fetch("/api/users", {
+        let data = await fetch(`${process.env.REACT_APP_API_URL}/users`, {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(user),
@@ -86,7 +86,7 @@ const Sign = () => {
     async (e) => {
       e.preventDefault();
       try {
-        let data = await fetch("/api/users");
+        let data = await fetch(`${process.env.REACT_APP_API_URL}/users`);
         let res = await data.json();
         let userFound = res.find(
           (elem) =>

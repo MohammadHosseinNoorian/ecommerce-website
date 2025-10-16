@@ -11,7 +11,7 @@ const Menu = () => {
   const list = useRef(null);
   let getmenu = async () => {
     try {
-      let data = await fetch("/api/menu");
+      let data = await fetch(`${process.env.REACT_APP_API_URL}/menu`);
       let res = await data.json();
       setmenu(res);
     } catch (error) {

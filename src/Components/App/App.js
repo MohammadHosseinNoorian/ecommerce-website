@@ -1,4 +1,4 @@
-import React, { StrictMode, useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Header from "../Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Sign from "../Pages/Sign/Sign";
@@ -14,7 +14,6 @@ import {
   ListStateProvider,
   ShopProvider,
 } from "../Contexts/ProductContext";
-import { createRoot } from "react-dom/client";
 export const usercontext = React.createContext();
 export const myContext = React.createContext();
 const App = () => {
@@ -26,7 +25,7 @@ const App = () => {
   let [countries, setcountries] = useState([]);
   let getproducts = useCallback(async () => {
     try {
-      let res = await fetch("/api/products");
+      let res = await fetch(`${process.env.REACT_APP_API_URL}/products`);
       let data = await res.json();
       setbooks(data);
     } catch (er) {
@@ -35,7 +34,7 @@ const App = () => {
   }, []);
   let getcountries = useCallback(async () => {
     try {
-      let res = await fetch("/api/countries");
+      let res = await fetch(`${process.env.REACT_APP_API_URL}/countries`);
       let data = await res.json();
       setcountries(data);
     } catch (er) {
